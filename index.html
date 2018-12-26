@@ -306,7 +306,7 @@ C:\Users\LTC&gt;nrm use cnpm
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/26/vue06/" data-id="cjq51kzys0005s0wam99slud7" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/26/vue06/" data-id="cjq52vgw40006m0wavzutfpgv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -479,7 +479,7 @@ this.$emit(&apos;showinfo&apos;, &apos;哈哈哈,这是子组件的数据&apos;)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/vue05/" data-id="cjq51kzyi0004s0wakomehteh" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/25/vue05/" data-id="cjq52vgvk0005m0wafmi1c6sv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -595,137 +595,7 @@ hexo d
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/hexo_deploy/" data-id="cjq51hb4i0001cswa5ec03tma" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vue01" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/25/vue01/" class="article-date">
-  <time datetime="2018-12-24T16:56:13.000Z" itemprop="datePublished">2018-12-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/25/vue01/">vue01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="vue-day01"><a href="#vue-day01" class="headerlink" title="vue day01"></a>vue day01</h2><h3 id="hello-vue"><a href="#hello-vue" class="headerlink" title="hello vue"></a>hello vue</h3><p>vue就是一个js文件而已</p>
-<ol>
-<li><p>新建HTML页面, 引入vue.js文件</p>
-<pre><code>&lt;script src=&quot;./lib/vue-2.4.0.js&quot;&gt;&lt;/script&gt;
-</code></pre></li>
-<li><p>在页面中准备一个Vue的控制区域</p>
-<pre><code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;    
-</code></pre></li>
-<li><p>创建Vue实例</p>
-<pre><code>var vm = new Vue({
-  el: &apos;#app&apos;,
-  data: {
-    hello: &apos;你好啊vuejs!&apos;
-  }
-})
-</code></pre></li>
-<li><p>在app控制区域中使用vue的指令或者插值表达式将hello数据渲染到页面</p>
-<p> 插值表达式:</p>
-<pre><code>&lt;div id=&quot;app&quot;&gt;
-    &lt;p&gt;
-        {{ hello }}
-    &lt;/p&gt;
-&lt;/div&gt;
-</code></pre><p> v-text:</p>
-<pre><code>&lt;p v-text=&quot;hello&quot;&gt;&lt;/p&gt;
-</code></pre><p> v-html:</p>
-<pre><code>&lt;p v-html=&quot;hello&quot;&gt;&lt;/p&gt;
-</code></pre><p> 如果hello数据中有HTML标签, v-html会解析HTML标签, 而v-text会直接将其解析成纯文本输出</p>
-</li>
-</ol>
-<h3 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h3><p>在vue中, 一切以 <code>v-</code> 开头的都是指令: directive</p>
-<p>插值表达式, Mustache语法也被称为小胡子语法:</p>
-<pre><code>{{ msg }}
-</code></pre><ol>
-<li><p>v-cloak</p>
-<p> 了解即可, 可以结合css解决插值表达式闪烁的问题, 让标签元素默认隐藏, v-cloak的特点是当数据渲染完成后自动显示</p>
-</li>
-<li><p>v-text</p>
-<p> 将数据以<strong>纯文本</strong>的方式渲染到指定标签内部, 会直接覆盖标签内部的内容</p>
-</li>
-<li><p>v-html</p>
-<p> 同v-text, 区别在于可以渲染<strong>HTML标签</strong></p>
-</li>
-<li><p>v-bind</p>
-<p> 做属性绑定的指令, 在标签中绑定title属性: 如果使用了属性绑定, 属性值就会被解析成JS表达式, 所以msg必须在vm实例的data中定义好, 否则会报错</p>
-<pre><code>&lt;input v-bind:title=&quot;msg&quot; /&gt;
-</code></pre><p> 该指令使用非常频繁, 所以有简写形式 是 冒号  <code>:</code></p>
-<pre><code>&lt;input :title=&quot;msg&quot; /&gt;
-</code></pre><p> 而且v-bind可以绑定原生的dom属性, 也可以绑定自定义属性</p>
-</li>
-<li><p>v-on</p>
-<p> 做事件绑定的指令, 简写形式 是 艾特符号 <code>@</code></p>
-<pre><code>&lt;input @mouseover=&quot;clickHandler&quot; v-on:click=&quot;clickHandler&quot; /&gt;
-</code></pre><p> <code>clickHandler</code>必须在vue实例的 methods 节点中定义</p>
-<pre><code>var vm = new Vue({
-  el: &apos;#app&apos;,
-  methods: {
-    clickHandler() {
-      console.log(&apos;秀!&apos;)
-    }
-  }
-})
-</code></pre><p> 如果需要绑定其他事件, 将click换成其他事件名即可</p>
-</li>
-<li><p>v-model</p>
-<p> <strong>注意: 这是唯一一个实现双向数据绑定的指令, 而且只能用于表单元素, 不需要指定属性, 只能绑定value属性</strong></p>
-<pre><code>&lt;input type=&quot;text&quot; style=&quot;width:100%;&quot; v-model=&quot;msg&quot;&gt;
-</code></pre><p> 如果双向数据绑定, 一定要先在data中定义好msg</p>
-</li>
-</ol>
-<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><p>事件修饰符在事件绑定时, 加在事件名后面</p>
-<pre><code>&lt;input @click.stop=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
-</code></pre><p>事件修饰符可以串联加多个</p>
-<pre><code>&lt;input @click.stop.prevent=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
-</code></pre><ol>
-<li><p>阻止冒泡</p>
-<p> .stop</p>
-</li>
-<li><p>阻止浏览器默认行为</p>
-<p> .prevent</p>
-</li>
-<li><p>使用捕获, 等同于 <code>addEventListener()</code> 第三个参数传入true的效果</p>
-<p> .capture</p>
-</li>
-<li><p>只有点击当前元素自身才会触发事件, 如果通过冒泡或者捕获传递过来的事件不会触发</p>
-<p> .self</p>
-</li>
-<li><p>只触发一次</p>
-<p> .once</p>
-</li>
-<li><p>在移动端使用scroll事件时建议加上, 可以提高性能</p>
-<p> .passive</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/vue01/" data-id="cjq51kzy20000s0wadvmx7rvt" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/25/hexo_deploy/" data-id="cjq52vgvb0001m0wau348prgn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -921,7 +791,137 @@ outer()()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/vue02/" data-id="cjq51kzy90001s0wa7egapb6z" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/25/vue02/" data-id="cjq52vgv20000m0wa0w23nsu6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vue01" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/25/vue01/" class="article-date">
+  <time datetime="2018-12-24T16:56:13.000Z" itemprop="datePublished">2018-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/25/vue01/">vue01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="vue-day01"><a href="#vue-day01" class="headerlink" title="vue day01"></a>vue day01</h2><h3 id="hello-vue"><a href="#hello-vue" class="headerlink" title="hello vue"></a>hello vue</h3><p>vue就是一个js文件而已</p>
+<ol>
+<li><p>新建HTML页面, 引入vue.js文件</p>
+<pre><code>&lt;script src=&quot;./lib/vue-2.4.0.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>在页面中准备一个Vue的控制区域</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;    
+</code></pre></li>
+<li><p>创建Vue实例</p>
+<pre><code>var vm = new Vue({
+  el: &apos;#app&apos;,
+  data: {
+    hello: &apos;你好啊vuejs!&apos;
+  }
+})
+</code></pre></li>
+<li><p>在app控制区域中使用vue的指令或者插值表达式将hello数据渲染到页面</p>
+<p> 插值表达式:</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;p&gt;
+        {{ hello }}
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre><p> v-text:</p>
+<pre><code>&lt;p v-text=&quot;hello&quot;&gt;&lt;/p&gt;
+</code></pre><p> v-html:</p>
+<pre><code>&lt;p v-html=&quot;hello&quot;&gt;&lt;/p&gt;
+</code></pre><p> 如果hello数据中有HTML标签, v-html会解析HTML标签, 而v-text会直接将其解析成纯文本输出</p>
+</li>
+</ol>
+<h3 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h3><p>在vue中, 一切以 <code>v-</code> 开头的都是指令: directive</p>
+<p>插值表达式, Mustache语法也被称为小胡子语法:</p>
+<pre><code>{{ msg }}
+</code></pre><ol>
+<li><p>v-cloak</p>
+<p> 了解即可, 可以结合css解决插值表达式闪烁的问题, 让标签元素默认隐藏, v-cloak的特点是当数据渲染完成后自动显示</p>
+</li>
+<li><p>v-text</p>
+<p> 将数据以<strong>纯文本</strong>的方式渲染到指定标签内部, 会直接覆盖标签内部的内容</p>
+</li>
+<li><p>v-html</p>
+<p> 同v-text, 区别在于可以渲染<strong>HTML标签</strong></p>
+</li>
+<li><p>v-bind</p>
+<p> 做属性绑定的指令, 在标签中绑定title属性: 如果使用了属性绑定, 属性值就会被解析成JS表达式, 所以msg必须在vm实例的data中定义好, 否则会报错</p>
+<pre><code>&lt;input v-bind:title=&quot;msg&quot; /&gt;
+</code></pre><p> 该指令使用非常频繁, 所以有简写形式 是 冒号  <code>:</code></p>
+<pre><code>&lt;input :title=&quot;msg&quot; /&gt;
+</code></pre><p> 而且v-bind可以绑定原生的dom属性, 也可以绑定自定义属性</p>
+</li>
+<li><p>v-on</p>
+<p> 做事件绑定的指令, 简写形式 是 艾特符号 <code>@</code></p>
+<pre><code>&lt;input @mouseover=&quot;clickHandler&quot; v-on:click=&quot;clickHandler&quot; /&gt;
+</code></pre><p> <code>clickHandler</code>必须在vue实例的 methods 节点中定义</p>
+<pre><code>var vm = new Vue({
+  el: &apos;#app&apos;,
+  methods: {
+    clickHandler() {
+      console.log(&apos;秀!&apos;)
+    }
+  }
+})
+</code></pre><p> 如果需要绑定其他事件, 将click换成其他事件名即可</p>
+</li>
+<li><p>v-model</p>
+<p> <strong>注意: 这是唯一一个实现双向数据绑定的指令, 而且只能用于表单元素, 不需要指定属性, 只能绑定value属性</strong></p>
+<pre><code>&lt;input type=&quot;text&quot; style=&quot;width:100%;&quot; v-model=&quot;msg&quot;&gt;
+</code></pre><p> 如果双向数据绑定, 一定要先在data中定义好msg</p>
+</li>
+</ol>
+<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><p>事件修饰符在事件绑定时, 加在事件名后面</p>
+<pre><code>&lt;input @click.stop=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
+</code></pre><p>事件修饰符可以串联加多个</p>
+<pre><code>&lt;input @click.stop.prevent=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
+</code></pre><ol>
+<li><p>阻止冒泡</p>
+<p> .stop</p>
+</li>
+<li><p>阻止浏览器默认行为</p>
+<p> .prevent</p>
+</li>
+<li><p>使用捕获, 等同于 <code>addEventListener()</code> 第三个参数传入true的效果</p>
+<p> .capture</p>
+</li>
+<li><p>只有点击当前元素自身才会触发事件, 如果通过冒泡或者捕获传递过来的事件不会触发</p>
+<p> .self</p>
+</li>
+<li><p>只触发一次</p>
+<p> .once</p>
+</li>
+<li><p>在移动端使用scroll事件时建议加上, 可以提高性能</p>
+<p> .passive</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://localhost:4000/2018/12/25/vue01/" data-id="cjq52vgve0002m0waribvny65" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1066,7 +1066,7 @@ Vue.config.keyCodes.f2 = 113
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/vue03/" data-id="cjq51kzyc0002s0wa4b5bblfb" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/25/vue03/" data-id="cjq52vgvg0003m0waqglgd2z5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1206,7 +1206,7 @@ Vue.config.keyCodes.f2 = 113
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2018/12/25/vue04/" data-id="cjq51kzye0003s0waqy2we2kd" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2018/12/25/vue04/" data-id="cjq52vgvi0004m0wawwezvltk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1259,11 +1259,11 @@ Vue.config.keyCodes.f2 = 113
           </li>
         
           <li>
-            <a href="/2018/12/25/vue01/">vue01</a>
+            <a href="/2018/12/25/vue02/">vue02</a>
           </li>
         
           <li>
-            <a href="/2018/12/25/vue02/">vue02</a>
+            <a href="/2018/12/25/vue01/">vue01</a>
           </li>
         
       </ul>
