@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>vueday01 | 代威的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vue day01hello vuevue就是一个js文件而已  新建HTML页面, 引入vue.js文件 &amp;lt;script src=&amp;quot;./lib/vue-2.4.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  在页面中准备一个Vue的控制区域 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;      创建Vue实例 var vm">
+<meta name="keywords" content="Web,前端,node,ES6,开发,程序员,技术宅">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vueday01">
+<meta property="og:url" content="http://localhost:4000/2018/12/25/vueday01/index.html">
+<meta property="og:site_name" content="代威的个人博客">
+<meta property="og:description" content="vue day01hello vuevue就是一个js文件而已  新建HTML页面, 引入vue.js文件 &amp;lt;script src=&amp;quot;./lib/vue-2.4.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  在页面中准备一个Vue的控制区域 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;      创建Vue实例 var vm">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-25T12:01:20.305Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vueday01">
+<meta name="twitter:description" content="vue day01hello vuevue就是一个js文件而已  新建HTML页面, 引入vue.js文件 &amp;lt;script src=&amp;quot;./lib/vue-2.4.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  在页面中准备一个Vue的控制区域 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;      创建Vue实例 var vm">
+  
+    <link rel="alternate" href="/atom.xml" title="代威的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">代威的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Code is my life.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://localhost:4000"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vueday01" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/25/vueday01/" class="article-date">
+  <time datetime="2018-12-24T16:56:13.000Z" itemprop="datePublished">2018-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vueday01
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="vue-day01"><a href="#vue-day01" class="headerlink" title="vue day01"></a>vue day01</h2><h3 id="hello-vue"><a href="#hello-vue" class="headerlink" title="hello vue"></a>hello vue</h3><p>vue就是一个js文件而已</p>
+<ol>
+<li><p>新建HTML页面, 引入vue.js文件</p>
+<pre><code>&lt;script src=&quot;./lib/vue-2.4.0.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>在页面中准备一个Vue的控制区域</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;    
+</code></pre></li>
+<li><p>创建Vue实例</p>
+<pre><code>var vm = new Vue({
+  el: &apos;#app&apos;,
+  data: {
+    hello: &apos;你好啊vuejs!&apos;
+  }
+})
+</code></pre></li>
+<li><p>在app控制区域中使用vue的指令或者插值表达式将hello数据渲染到页面</p>
+<p> 插值表达式:</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;p&gt;
+        {{ hello }}
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre><p> v-text:</p>
+<pre><code>&lt;p v-text=&quot;hello&quot;&gt;&lt;/p&gt;
+</code></pre><p> v-html:</p>
+<pre><code>&lt;p v-html=&quot;hello&quot;&gt;&lt;/p&gt;
+</code></pre><p> 如果hello数据中有HTML标签, v-html会解析HTML标签, 而v-text会直接将其解析成纯文本输出</p>
+</li>
+</ol>
+<h3 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h3><p>在vue中, 一切以 <code>v-</code> 开头的都是指令: directive</p>
+<p>插值表达式, Mustache语法也被称为小胡子语法:</p>
+<pre><code>{{ msg }}
+</code></pre><ol>
+<li><p>v-cloak</p>
+<p> 了解即可, 可以结合css解决插值表达式闪烁的问题, 让标签元素默认隐藏, v-cloak的特点是当数据渲染完成后自动显示</p>
+</li>
+<li><p>v-text</p>
+<p> 将数据以<strong>纯文本</strong>的方式渲染到指定标签内部, 会直接覆盖标签内部的内容</p>
+</li>
+<li><p>v-html</p>
+<p> 同v-text, 区别在于可以渲染<strong>HTML标签</strong></p>
+</li>
+<li><p>v-bind</p>
+<p> 做属性绑定的指令, 在标签中绑定title属性: 如果使用了属性绑定, 属性值就会被解析成JS表达式, 所以msg必须在vm实例的data中定义好, 否则会报错</p>
+<pre><code>&lt;input v-bind:title=&quot;msg&quot; /&gt;
+</code></pre><p> 该指令使用非常频繁, 所以有简写形式 是 冒号  <code>:</code></p>
+<pre><code>&lt;input :title=&quot;msg&quot; /&gt;
+</code></pre><p> 而且v-bind可以绑定原生的dom属性, 也可以绑定自定义属性</p>
+</li>
+<li><p>v-on</p>
+<p> 做事件绑定的指令, 简写形式 是 艾特符号 <code>@</code></p>
+<pre><code>&lt;input @mouseover=&quot;clickHandler&quot; v-on:click=&quot;clickHandler&quot; /&gt;
+</code></pre><p> <code>clickHandler</code>必须在vue实例的 methods 节点中定义</p>
+<pre><code>var vm = new Vue({
+  el: &apos;#app&apos;,
+  methods: {
+    clickHandler() {
+      console.log(&apos;秀!&apos;)
+    }
+  }
+})
+</code></pre><p> 如果需要绑定其他事件, 将click换成其他事件名即可</p>
+</li>
+<li><p>v-model</p>
+<p> <strong>注意: 这是唯一一个实现双向数据绑定的指令, 而且只能用于表单元素, 不需要指定属性, 只能绑定value属性</strong></p>
+<pre><code>&lt;input type=&quot;text&quot; style=&quot;width:100%;&quot; v-model=&quot;msg&quot;&gt;
+</code></pre><p> 如果双向数据绑定, 一定要先在data中定义好msg</p>
+</li>
+</ol>
+<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><p>事件修饰符在事件绑定时, 加在事件名后面</p>
+<pre><code>&lt;input @click.stop=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
+</code></pre><p>事件修饰符可以串联加多个</p>
+<pre><code>&lt;input @click.stop.prevent=&quot;roll&quot; type=&quot;button&quot; value=&quot;动起来&quot;&gt;
+</code></pre><ol>
+<li><p>阻止冒泡</p>
+<p> .stop</p>
+</li>
+<li><p>阻止浏览器默认行为</p>
+<p> .prevent</p>
+</li>
+<li><p>使用捕获, 等同于 <code>addEventListener()</code> 第三个参数传入true的效果</p>
+<p> .capture</p>
+</li>
+<li><p>只有点击当前元素自身才会触发事件, 如果通过冒泡或者捕获传递过来的事件不会触发</p>
+<p> .self</p>
+</li>
+<li><p>只触发一次</p>
+<p> .once</p>
+</li>
+<li><p>在移动端使用scroll事件时建议加上, 可以提高性能</p>
+<p> .passive</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://localhost:4000/2018/12/25/vueday01/" data-id="cjq4wasox0002pgwa69e9zwgs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/25/vueday02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vueday02
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/25/vueday03/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vueday03</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/25/vueday05/">vueday05</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/25/hexo_deploy/">使用hexo部署一个博客服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/25/vueday02/">vueday02</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/25/vueday01/">vueday01</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/25/vueday03/">vueday03</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 代威<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
