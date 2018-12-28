@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="vue day02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂">
+<meta name="description" content="vue 02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂函数创">
 <meta name="keywords" content="Web,前端,node,ES6,开发,程序员,技术宅">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue02">
 <meta property="og:url" content="http://localhost:4000/2018/12/25/vue02/index.html">
 <meta property="og:site_name" content="代威的个人博客">
-<meta property="og:description" content="vue day02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂">
+<meta property="og:description" content="vue 02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂函数创">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-26T10:33:22.953Z">
+<meta property="og:updated_time" content="2018-12-28T12:55:53.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue02">
-<meta name="twitter:description" content="vue day02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂">
+<meta name="twitter:description" content="vue 02往期知识点回顾 创建对象的方式: // 对象字面量 var obj = {} // new Object()  // 数组字面量 var arr = [] // new Array()  // 正则字面量 var regex = /\w+/ // new RegExp()  // 使用Object构造函数创建对象 var obj2 = new Object()  // 自定义工厂函数创">
 
 
 
@@ -300,7 +300,7 @@
       
 
       
-        <h2 id="vue-day02"><a href="#vue-day02" class="headerlink" title="vue day02"></a>vue day02</h2><h3 id="往期知识点回顾"><a href="#往期知识点回顾" class="headerlink" title="往期知识点回顾"></a>往期知识点回顾</h3><ol>
+        <h2 id="vue-02"><a href="#vue-02" class="headerlink" title="vue 02"></a>vue 02</h2><h3 id="往期知识点回顾"><a href="#往期知识点回顾" class="headerlink" title="往期知识点回顾"></a>往期知识点回顾</h3><ol>
 <li><p>创建对象的方式:</p>
 <pre><code>// 对象字面量
 var obj = {} // new Object()
@@ -338,10 +338,10 @@ console.log(typeof obj4) // &apos;object&apos;
 // A instanceof B 就是看B是否在A的原型链上
 console.log(obj4 instanceof Student) // true
 console.log(obj4 instanceof Object) // true
-</code></pre><p> 总结: 创建对象 永远都离不开 构造函数, 最终一定是 new 构造函数创建出来的对象, 所以不存在几种创建对象的方式, 只有一种, 就是通过构造函数创建对象</p>
+</code></pre><p>总结: 创建对象 永远都离不开 构造函数, 最终一定是 new 构造函数创建出来的对象, 所以不存在几种创建对象的方式, 只有一种, 就是通过构造函数创建对象</p>
 </li>
 <li><p>闭包</p>
-<p> 函数内部包含一个函数, 在内部函数中访问了外部函数中的局部成员</p>
+<p>函数内部包含一个函数, 在内部函数中访问了外部函数中的局部成员</p>
 <pre><code>function outer() {
     var a = 10
     function inner() {
@@ -352,8 +352,8 @@ console.log(obj4 instanceof Object) // true
 }
 
 outer()()
-</code></pre><p> 在开发中尽量减少使用闭包, 因为闭包一定会导致内存泄漏</p>
-<p> 内存泄漏: 本该被释放的内存, 没有被释放</p>
+</code></pre><p>在开发中尽量减少使用闭包, 因为闭包一定会导致内存泄漏</p>
+<p>内存泄漏: 本该被释放的内存, 没有被释放</p>
 </li>
 <li><p>事件委托(事件代理)</p>
 <blockquote>
@@ -367,20 +367,20 @@ outer()()
 <h3 id="设置类样式"><a href="#设置类样式" class="headerlink" title="设置类样式"></a>设置类样式</h3><p>总结来说使用属性绑定的方式设置样式, 一般就是设置 对象 或 数组</p>
 <ol>
 <li><p>设置一个数组</p>
-<p> 适合同时设置多个固定样式 (一般不用)</p>
+<p>适合同时设置多个固定样式 (一般不用)</p>
 <pre><code>&lt;h1 :class=&quot;[&apos;red&apos;, &apos;thin&apos;]&quot;&gt;这是一个很大很大的H1，大到你无法想象！！！&lt;/h1&gt;
-</code></pre><p> 如果其中某些<strong>样式需要动态切换</strong>, 根据标记切换</p>
-<p> 在js中属性名如果是合法的变量名, 可以不用加引号, 以下代码表示h1固定样式是red和thin, active样式是根据flag的true或false动态切换</p>
-<p> flag需要在data中定义</p>
+</code></pre><p>如果其中某些<strong>样式需要动态切换</strong>, 根据标记切换</p>
+<p>在js中属性名如果是合法的变量名, 可以不用加引号, 以下代码表示h1固定样式是red和thin, active样式是根据flag的true或false动态切换</p>
+<p>flag需要在data中定义</p>
 <pre><code>&lt;h1 :class=&quot;[&apos;red&apos;, &apos;thin&apos;, { active: flag }]&quot;&gt;这是一个很大很大的H1，大到你无法想象！！！&lt;/h1&gt;
-</code></pre><p> 此方式适合多个固定样式结合少量动态切换的样式使用</p>
+</code></pre><p>此方式适合多个固定样式结合少量动态切换的样式使用</p>
 </li>
 <li><p>设置一个对象</p>
-<p> 适合多个动态切换的样式, 少部分固定样式使用, 因为固定样式也需要手动加上true, 不如直接用数组来设置样式</p>
+<p>适合多个动态切换的样式, 少部分固定样式使用, 因为固定样式也需要手动加上true, 不如直接用数组来设置样式</p>
 <pre><code>&lt;h1 :class=&quot;{ red: true, thin: false, active: true }&quot;&gt;这是一个很大很大的H1，大到你无法想象！！！&lt;/h1&gt;
 </code></pre></li>
 <li><p>使用字符串拼接动态操作类样式 (<strong>不推荐!!!</strong>)</p>
-<p> 因为字符串操作容易出现问题, 所以尽量不要使用字符串拼接的方式去动态修改类样式</p>
+<p>因为字符串操作容易出现问题, 所以尽量不要使用字符串拼接的方式去动态修改类样式</p>
 <pre><code>&lt;h1 :class=&quot;&apos;active red&apos; + (flag ? &apos; thin&apos; : &apos;&apos;)&quot;&gt;这是一个很大很大的H1，大到你无法想象！！！&lt;/h1&gt;
 </code></pre></li>
 </ol>
@@ -433,14 +433,14 @@ outer()()
     索引: {{ index }}
 &lt;/p&gt;
 </code></pre></li>
-<li><p>渲染对象</p>
+<li><p>渲染对象<br>​    </p>
 <pre><code>&lt;p v-for=&quot;(val, key) in user&quot;&gt;
     键: {{ key }}
     值: {{ val }}
 &lt;/p&gt;
 </code></pre></li>
 <li><p>迭代数字</p>
-<p> item从1开始到20结束, 如果要当成索引用, 可以手动 -1</p>
+<p>item从1开始到20结束, 如果要当成索引用, 可以手动 -1</p>
 <pre><code>&lt;p v-for=&quot;item in 20&quot;&gt;
     {{ item }}
 &lt;/p&gt;
@@ -573,7 +573,7 @@ outer()()
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +610,7 @@ outer()()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-day02"><span class="nav-number">1.</span> <span class="nav-text">vue day02</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#往期知识点回顾"><span class="nav-number">1.1.</span> <span class="nav-text">往期知识点回顾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置类样式"><span class="nav-number">1.2.</span> <span class="nav-text">设置类样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置行内样式"><span class="nav-number">1.3.</span> <span class="nav-text">设置行内样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for-列表渲染"><span class="nav-number">1.4.</span> <span class="nav-text">v-for 列表渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for-中的-key-属性"><span class="nav-number">1.5.</span> <span class="nav-text">v-for 中的 key 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-if-和-v-show"><span class="nav-number">1.6.</span> <span class="nav-text">v-if 和 v-show</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-02"><span class="nav-number">1.</span> <span class="nav-text">vue 02</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#往期知识点回顾"><span class="nav-number">1.1.</span> <span class="nav-text">往期知识点回顾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置类样式"><span class="nav-number">1.2.</span> <span class="nav-text">设置类样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置行内样式"><span class="nav-number">1.3.</span> <span class="nav-text">设置行内样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for-列表渲染"><span class="nav-number">1.4.</span> <span class="nav-text">v-for 列表渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for-中的-key-属性"><span class="nav-number">1.5.</span> <span class="nav-text">v-for 中的 key 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-if-和-v-show"><span class="nav-number">1.6.</span> <span class="nav-text">v-if 和 v-show</span></a></li></ol></li></ol></div>
             
 
           </div>
